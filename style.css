@@ -1,0 +1,52 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    width: 800px;
+    height: 150px;
+    margin-top: 30px;
+
+    border: 1px dashed black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section {
+    width: 1000px;
+    height: 400px;
+    margin-top: 30px;
+    padding: 5px;
+
+    border: 1px dashed black;
+
+    display: flex;
+
+}
+
+.card-container {
+    width: 1000px;
+    border: 1px dashed black;
+    padding: 5px;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    border: 1px solid black;
+    width: 150px;
+    height: 180px;
+    margin-right: 5px;
+}
