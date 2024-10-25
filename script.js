@@ -1,18 +1,36 @@
 const inputText = document.querySelector('input');
 const cardContainer = document.querySelector('.card-container');
 
+
+const showNotification = (notifText) => {
+    const notification = document.createElement('div');
+    notification.classList.add('nullInput-Notification');
+    notification.textContent = notifText;
+
+    notification.style.color = "#ee1b10";
+
+    document.body.appendChild(notification);
+    notification.classList.add('show');
+
+    // Remove the notification after 3 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 3000);
+}
+
 // Add a car function
 const addCarBtn = document.querySelector('.add-car-btn');
 addCarBtn.addEventListener("click",() => {
-    const carInput = inputText.value.trim();
+    const carInput = inputText.value.trim().toUpperCase();
 
     if(cardContainer.children.length >= 12){
-        alert("You've reached the maximum number of vehicles.");
+        showNotification(`You've reach the maximum amount of cars to store.`);
+        inputText.value = '';
         return;
     }
 
     if(carInput == ''){
-        alert('Enter a value');
+        showNotification(`You need to enter a car to store!`);
         return;
     }
     const carCard = document.createElement('div');
@@ -25,8 +43,11 @@ addCarBtn.addEventListener("click",() => {
     carHeader.textContent = carInput;
 
     const removeBtn = document.createElement('button');
-    removeBtn.textContent = `Remove`;
     removeBtn.classList.add('remove-car-btn');
+
+    const removeBtnIcon = document.createElement('i');
+    removeBtnIcon.classList.add('bx', 'bxs-trash');
+    removeBtn.appendChild(removeBtnIcon);
 
     // Remove each card for user's choice
     removeBtn.addEventListener("click",() => {
@@ -41,3 +62,5 @@ addCarBtn.addEventListener("click",() => {
     inputText.value = '';
 
 })
+
+
