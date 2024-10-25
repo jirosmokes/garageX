@@ -26,8 +26,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+}
+
+header i {
+    font-size: xx-large;
+    margin-right: 5px;
 }
 
 header span {
@@ -56,6 +59,7 @@ main input {
     box-sizing: border-box;
     
     color: var(--white);
+    font-family: "JetBrains Mono";
     background: linear-gradient(145deg, #202020, #272525);
     border: none;
 }
