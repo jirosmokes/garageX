@@ -24,10 +24,6 @@ addCarBtn.addEventListener("click",() => {
     const carHeader = document.createElement('span');
     carHeader.textContent = carInput;
 
-    carHeader.addEventListener("mouseover", () => {
-        carHeader.style.fontWeight = "bold";
-    })
-
     const removeBtn = document.createElement('button');
     removeBtn.textContent = `Remove`;
     removeBtn.classList.add('remove-car-btn');
