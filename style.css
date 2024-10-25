@@ -5,6 +5,8 @@ body {
     
     align-items: center;
     flex-direction: column;
+
+    font-family: Arial;
 }
 
 main {
@@ -49,4 +51,13 @@ section {
     width: 150px;
     height: 180px;
     margin-right: 5px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card span {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
